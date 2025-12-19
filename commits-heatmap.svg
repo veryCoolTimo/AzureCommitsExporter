@@ -44,8 +44,8 @@
 <rect class="day-cell" x="91" y="48" width="11" height="11" fill="#161b22"><title>2025-01-14: 0 commits</title></rect>
 <rect class="day-cell" x="91" y="62" width="11" height="11" fill="#161b22"><title>2025-01-15: 0 commits</title></rect>
 <rect class="day-cell" x="91" y="76" width="11" height="11" fill="#161b22"><title>2025-01-16: 0 commits</title></rect>
-<rect class="day-cell" x="91" y="90" width="11" height="11" fill="#161b22"><title>2025-01-17: 0 commits</title></rect>
-<rect class="day-cell" x="91" y="104" width="11" height="11" fill="#161b22"><title>2025-01-18: 0 commits</title></rect>
+<rect class="day-cell" x="91" y="90" width="11" height="11" fill="#0e4429"><title>2025-01-17: 2 commits</title></rect>
+<rect class="day-cell" x="91" y="104" width="11" height="11" fill="#0e4429"><title>2025-01-18: 1 commit</title></rect>
 <rect class="day-cell" x="105" y="20" width="11" height="11" fill="#161b22"><title>2025-01-19: 0 commits</title></rect>
 <rect class="day-cell" x="105" y="34" width="11" height="11" fill="#161b22"><title>2025-01-20: 0 commits</title></rect>
 <rect class="day-cell" x="105" y="48" width="11" height="11" fill="#161b22"><title>2025-01-21: 0 commits</title></rect>
@@ -91,11 +91,11 @@
 <text x="175" y="15" class="month">Mar</text>
 <rect class="day-cell" x="175" y="104" width="11" height="11" fill="#161b22"><title>2025-03-01: 0 commits</title></rect>
 <rect class="day-cell" x="189" y="20" width="11" height="11" fill="#161b22"><title>2025-03-02: 0 commits</title></rect>
-<rect class="day-cell" x="189" y="34" width="11" height="11" fill="#161b22"><title>2025-03-03: 0 commits</title></rect>
+<rect class="day-cell" x="189" y="34" width="11" height="11" fill="#0e4429"><title>2025-03-03: 1 commit</title></rect>
 <rect class="day-cell" x="189" y="48" width="11" height="11" fill="#161b22"><title>2025-03-04: 0 commits</title></rect>
 <rect class="day-cell" x="189" y="62" width="11" height="11" fill="#161b22"><title>2025-03-05: 0 commits</title></rect>
 <rect class="day-cell" x="189" y="76" width="11" height="11" fill="#161b22"><title>2025-03-06: 0 commits</title></rect>
-<rect class="day-cell" x="189" y="90" width="11" height="11" fill="#161b22"><title>2025-03-07: 0 commits</title></rect>
+<rect class="day-cell" x="189" y="90" width="11" height="11" fill="#0e4429"><title>2025-03-07: 2 commits</title></rect>
 <rect class="day-cell" x="189" y="104" width="11" height="11" fill="#161b22"><title>2025-03-08: 0 commits</title></rect>
 <rect class="day-cell" x="203" y="20" width="11" height="11" fill="#161b22"><title>2025-03-09: 0 commits</title></rect>
 <rect class="day-cell" x="203" y="34" width="11" height="11" fill="#161b22"><title>2025-03-10: 0 commits</title></rect>
@@ -163,7 +163,7 @@
 <rect class="day-cell" x="315" y="90" width="11" height="11" fill="#161b22"><title>2025-05-09: 0 commits</title></rect>
 <rect class="day-cell" x="315" y="104" width="11" height="11" fill="#161b22"><title>2025-05-10: 0 commits</title></rect>
 <rect class="day-cell" x="329" y="20" width="11" height="11" fill="#161b22"><title>2025-05-11: 0 commits</title></rect>
-<rect class="day-cell" x="329" y="34" width="11" height="11" fill="#161b22"><title>2025-05-12: 0 commits</title></rect>
+<rect class="day-cell" x="329" y="34" width="11" height="11" fill="#0e4429"><title>2025-05-12: 4 commits</title></rect>
 <rect class="day-cell" x="329" y="48" width="11" height="11" fill="#161b22"><title>2025-05-13: 0 commits</title></rect>
 <rect class="day-cell" x="329" y="62" width="11" height="11" fill="#161b22"><title>2025-05-14: 0 commits</title></rect>
 <rect class="day-cell" x="329" y="76" width="11" height="11" fill="#161b22"><title>2025-05-15: 0 commits</title></rect>
@@ -176,10 +176,10 @@
 <rect class="day-cell" x="343" y="76" width="11" height="11" fill="#161b22"><title>2025-05-22: 0 commits</title></rect>
 <rect class="day-cell" x="343" y="90" width="11" height="11" fill="#161b22"><title>2025-05-23: 0 commits</title></rect>
 <rect class="day-cell" x="343" y="104" width="11" height="11" fill="#161b22"><title>2025-05-24: 0 commits</title></rect>
-<rect class="day-cell" x="357" y="20" width="11" height="11" fill="#161b22"><title>2025-05-25: 0 commits</title></rect>
+<rect class="day-cell" x="357" y="20" width="11" height="11" fill="#0e4429"><title>2025-05-25: 3 commits</title></rect>
 <rect class="day-cell" x="357" y="34" width="11" height="11" fill="#161b22"><title>2025-05-26: 0 commits</title></rect>
 <rect class="day-cell" x="357" y="48" width="11" height="11" fill="#161b22"><title>2025-05-27: 0 commits</title></rect>
-<rect class="day-cell" x="357" y="62" width="11" height="11" fill="#161b22"><title>2025-05-28: 0 commits</title></rect>
+<rect class="day-cell" x="357" y="62" width="11" height="11" fill="#006d32"><title>2025-05-28: 11 commits</title></rect>
 <rect class="day-cell" x="357" y="76" width="11" height="11" fill="#161b22"><title>2025-05-29: 0 commits</title></rect>
 <rect class="day-cell" x="357" y="90" width="11" height="11" fill="#161b22"><title>2025-05-30: 0 commits</title></rect>
 <rect class="day-cell" x="357" y="104" width="11" height="11" fill="#161b22"><title>2025-05-31: 0 commits</title></rect>
@@ -237,9 +237,9 @@
 <rect class="day-cell" x="469" y="20" width="11" height="11" fill="#161b22"><title>2025-07-20: 0 commits</title></rect>
 <rect class="day-cell" x="469" y="34" width="11" height="11" fill="#161b22"><title>2025-07-21: 0 commits</title></rect>
 <rect class="day-cell" x="469" y="48" width="11" height="11" fill="#161b22"><title>2025-07-22: 0 commits</title></rect>
-<rect class="day-cell" x="469" y="62" width="11" height="11" fill="#161b22"><title>2025-07-23: 0 commits</title></rect>
-<rect class="day-cell" x="469" y="76" width="11" height="11" fill="#161b22"><title>2025-07-24: 0 commits</title></rect>
-<rect class="day-cell" x="469" y="90" width="11" height="11" fill="#161b22"><title>2025-07-25: 0 commits</title></rect>
+<rect class="day-cell" x="469" y="62" width="11" height="11" fill="#0e4429"><title>2025-07-23: 4 commits</title></rect>
+<rect class="day-cell" x="469" y="76" width="11" height="11" fill="#0e4429"><title>2025-07-24: 1 commit</title></rect>
+<rect class="day-cell" x="469" y="90" width="11" height="11" fill="#0e4429"><title>2025-07-25: 2 commits</title></rect>
 <rect class="day-cell" x="469" y="104" width="11" height="11" fill="#161b22"><title>2025-07-26: 0 commits</title></rect>
 <rect class="day-cell" x="483" y="20" width="11" height="11" fill="#161b22"><title>2025-07-27: 0 commits</title></rect>
 <rect class="day-cell" x="483" y="34" width="11" height="11" fill="#161b22"><title>2025-07-28: 0 commits</title></rect>
@@ -282,19 +282,19 @@
 <rect class="day-cell" x="553" y="34" width="11" height="11" fill="#161b22"><title>2025-09-01: 0 commits</title></rect>
 <rect class="day-cell" x="553" y="48" width="11" height="11" fill="#161b22"><title>2025-09-02: 0 commits</title></rect>
 <rect class="day-cell" x="553" y="62" width="11" height="11" fill="#161b22"><title>2025-09-03: 0 commits</title></rect>
-<rect class="day-cell" x="553" y="76" width="11" height="11" fill="#161b22"><title>2025-09-04: 0 commits</title></rect>
+<rect class="day-cell" x="553" y="76" width="11" height="11" fill="#0e4429"><title>2025-09-04: 3 commits</title></rect>
 <rect class="day-cell" x="553" y="90" width="11" height="11" fill="#161b22"><title>2025-09-05: 0 commits</title></rect>
 <rect class="day-cell" x="553" y="104" width="11" height="11" fill="#161b22"><title>2025-09-06: 0 commits</title></rect>
 <rect class="day-cell" x="567" y="20" width="11" height="11" fill="#161b22"><title>2025-09-07: 0 commits</title></rect>
-<rect class="day-cell" x="567" y="34" width="11" height="11" fill="#161b22"><title>2025-09-08: 0 commits</title></rect>
-<rect class="day-cell" x="567" y="48" width="11" height="11" fill="#161b22"><title>2025-09-09: 0 commits</title></rect>
-<rect class="day-cell" x="567" y="62" width="11" height="11" fill="#161b22"><title>2025-09-10: 0 commits</title></rect>
-<rect class="day-cell" x="567" y="76" width="11" height="11" fill="#161b22"><title>2025-09-11: 0 commits</title></rect>
+<rect class="day-cell" x="567" y="34" width="11" height="11" fill="#0e4429"><title>2025-09-08: 1 commit</title></rect>
+<rect class="day-cell" x="567" y="48" width="11" height="11" fill="#0e4429"><title>2025-09-09: 4 commits</title></rect>
+<rect class="day-cell" x="567" y="62" width="11" height="11" fill="#0e4429"><title>2025-09-10: 1 commit</title></rect>
+<rect class="day-cell" x="567" y="76" width="11" height="11" fill="#0e4429"><title>2025-09-11: 2 commits</title></rect>
 <rect class="day-cell" x="567" y="90" width="11" height="11" fill="#161b22"><title>2025-09-12: 0 commits</title></rect>
-<rect class="day-cell" x="567" y="104" width="11" height="11" fill="#161b22"><title>2025-09-13: 0 commits</title></rect>
-<rect class="day-cell" x="581" y="20" width="11" height="11" fill="#161b22"><title>2025-09-14: 0 commits</title></rect>
-<rect class="day-cell" x="581" y="34" width="11" height="11" fill="#161b22"><title>2025-09-15: 0 commits</title></rect>
-<rect class="day-cell" x="581" y="48" width="11" height="11" fill="#161b22"><title>2025-09-16: 0 commits</title></rect>
+<rect class="day-cell" x="567" y="104" width="11" height="11" fill="#0e4429"><title>2025-09-13: 2 commits</title></rect>
+<rect class="day-cell" x="581" y="20" width="11" height="11" fill="#39d353"><title>2025-09-14: 37 commits</title></rect>
+<rect class="day-cell" x="581" y="34" width="11" height="11" fill="#26a641"><title>2025-09-15: 21 commits</title></rect>
+<rect class="day-cell" x="581" y="48" width="11" height="11" fill="#006d32"><title>2025-09-16: 12 commits</title></rect>
 <rect class="day-cell" x="581" y="62" width="11" height="11" fill="#161b22"><title>2025-09-17: 0 commits</title></rect>
 <rect class="day-cell" x="581" y="76" width="11" height="11" fill="#161b22"><title>2025-09-18: 0 commits</title></rect>
 <rect class="day-cell" x="581" y="90" width="11" height="11" fill="#161b22"><title>2025-09-19: 0 commits</title></rect>
@@ -302,12 +302,12 @@
 <rect class="day-cell" x="595" y="20" width="11" height="11" fill="#161b22"><title>2025-09-21: 0 commits</title></rect>
 <rect class="day-cell" x="595" y="34" width="11" height="11" fill="#161b22"><title>2025-09-22: 0 commits</title></rect>
 <rect class="day-cell" x="595" y="48" width="11" height="11" fill="#161b22"><title>2025-09-23: 0 commits</title></rect>
-<rect class="day-cell" x="595" y="62" width="11" height="11" fill="#161b22"><title>2025-09-24: 0 commits</title></rect>
+<rect class="day-cell" x="595" y="62" width="11" height="11" fill="#0e4429"><title>2025-09-24: 1 commit</title></rect>
 <rect class="day-cell" x="595" y="76" width="11" height="11" fill="#161b22"><title>2025-09-25: 0 commits</title></rect>
 <rect class="day-cell" x="595" y="90" width="11" height="11" fill="#161b22"><title>2025-09-26: 0 commits</title></rect>
 <rect class="day-cell" x="595" y="104" width="11" height="11" fill="#161b22"><title>2025-09-27: 0 commits</title></rect>
 <rect class="day-cell" x="609" y="20" width="11" height="11" fill="#0e4429"><title>2025-09-28: 5 commits</title></rect>
-<rect class="day-cell" x="609" y="34" width="11" height="11" fill="#006d32"><title>2025-09-29: 7 commits</title></rect>
+<rect class="day-cell" x="609" y="34" width="11" height="11" fill="#0e4429"><title>2025-09-29: 7 commits</title></rect>
 <rect class="day-cell" x="609" y="48" width="11" height="11" fill="#161b22"><title>2025-09-30: 0 commits</title></rect>
 <text x="609" y="15" class="month">Oct</text>
 <rect class="day-cell" x="609" y="62" width="11" height="11" fill="#0e4429"><title>2025-10-01: 1 commit</title></rect>
@@ -318,17 +318,17 @@
 <rect class="day-cell" x="623" y="34" width="11" height="11" fill="#161b22"><title>2025-10-06: 0 commits</title></rect>
 <rect class="day-cell" x="623" y="48" width="11" height="11" fill="#161b22"><title>2025-10-07: 0 commits</title></rect>
 <rect class="day-cell" x="623" y="62" width="11" height="11" fill="#0e4429"><title>2025-10-08: 2 commits</title></rect>
-<rect class="day-cell" x="623" y="76" width="11" height="11" fill="#26a641"><title>2025-10-09: 18 commits</title></rect>
-<rect class="day-cell" x="623" y="90" width="11" height="11" fill="#39d353"><title>2025-10-10: 23 commits</title></rect>
+<rect class="day-cell" x="623" y="76" width="11" height="11" fill="#006d32"><title>2025-10-09: 18 commits</title></rect>
+<rect class="day-cell" x="623" y="90" width="11" height="11" fill="#26a641"><title>2025-10-10: 23 commits</title></rect>
 <rect class="day-cell" x="623" y="104" width="11" height="11" fill="#0e4429"><title>2025-10-11: 6 commits</title></rect>
 <rect class="day-cell" x="637" y="20" width="11" height="11" fill="#0e4429"><title>2025-10-12: 6 commits</title></rect>
-<rect class="day-cell" x="637" y="34" width="11" height="11" fill="#006d32"><title>2025-10-13: 8 commits</title></rect>
+<rect class="day-cell" x="637" y="34" width="11" height="11" fill="#0e4429"><title>2025-10-13: 8 commits</title></rect>
 <rect class="day-cell" x="637" y="48" width="11" height="11" fill="#0e4429"><title>2025-10-14: 1 commit</title></rect>
 <rect class="day-cell" x="637" y="62" width="11" height="11" fill="#0e4429"><title>2025-10-15: 6 commits</title></rect>
 <rect class="day-cell" x="637" y="76" width="11" height="11" fill="#0e4429"><title>2025-10-16: 1 commit</title></rect>
-<rect class="day-cell" x="637" y="90" width="11" height="11" fill="#006d32"><title>2025-10-17: 9 commits</title></rect>
-<rect class="day-cell" x="637" y="104" width="11" height="11" fill="#006d32"><title>2025-10-18: 7 commits</title></rect>
-<rect class="day-cell" x="651" y="20" width="11" height="11" fill="#39d353"><title>2025-10-19: 24 commits</title></rect>
+<rect class="day-cell" x="637" y="90" width="11" height="11" fill="#0e4429"><title>2025-10-17: 9 commits</title></rect>
+<rect class="day-cell" x="637" y="104" width="11" height="11" fill="#0e4429"><title>2025-10-18: 7 commits</title></rect>
+<rect class="day-cell" x="651" y="20" width="11" height="11" fill="#26a641"><title>2025-10-19: 24 commits</title></rect>
 <rect class="day-cell" x="651" y="34" width="11" height="11" fill="#0e4429"><title>2025-10-20: 2 commits</title></rect>
 <rect class="day-cell" x="651" y="48" width="11" height="11" fill="#0e4429"><title>2025-10-21: 1 commit</title></rect>
 <rect class="day-cell" x="651" y="62" width="11" height="11" fill="#161b22"><title>2025-10-22: 0 commits</title></rect>
@@ -355,9 +355,9 @@
 <rect class="day-cell" x="693" y="48" width="11" height="11" fill="#161b22"><title>2025-11-11: 0 commits</title></rect>
 <rect class="day-cell" x="693" y="62" width="11" height="11" fill="#161b22"><title>2025-11-12: 0 commits</title></rect>
 <rect class="day-cell" x="693" y="76" width="11" height="11" fill="#161b22"><title>2025-11-13: 0 commits</title></rect>
-<rect class="day-cell" x="693" y="90" width="11" height="11" fill="#26a641"><title>2025-11-14: 16 commits</title></rect>
+<rect class="day-cell" x="693" y="90" width="11" height="11" fill="#006d32"><title>2025-11-14: 16 commits</title></rect>
 <rect class="day-cell" x="693" y="104" width="11" height="11" fill="#0e4429"><title>2025-11-15: 1 commit</title></rect>
-<rect class="day-cell" x="707" y="20" width="11" height="11" fill="#26a641"><title>2025-11-16: 18 commits</title></rect>
+<rect class="day-cell" x="707" y="20" width="11" height="11" fill="#006d32"><title>2025-11-16: 18 commits</title></rect>
 <rect class="day-cell" x="707" y="34" width="11" height="11" fill="#161b22"><title>2025-11-17: 0 commits</title></rect>
 <rect class="day-cell" x="707" y="48" width="11" height="11" fill="#161b22"><title>2025-11-18: 0 commits</title></rect>
 <rect class="day-cell" x="707" y="62" width="11" height="11" fill="#161b22"><title>2025-11-19: 0 commits</title></rect>
@@ -371,7 +371,7 @@
 <rect class="day-cell" x="721" y="76" width="11" height="11" fill="#0e4429"><title>2025-11-27: 1 commit</title></rect>
 <rect class="day-cell" x="721" y="90" width="11" height="11" fill="#0e4429"><title>2025-11-28: 1 commit</title></rect>
 <rect class="day-cell" x="721" y="104" width="11" height="11" fill="#0e4429"><title>2025-11-29: 5 commits</title></rect>
-<rect class="day-cell" x="735" y="20" width="11" height="11" fill="#39d353"><title>2025-11-30: 20 commits</title></rect>
+<rect class="day-cell" x="735" y="20" width="11" height="11" fill="#26a641"><title>2025-11-30: 20 commits</title></rect>
 <text x="735" y="15" class="month">Dec</text>
 <rect class="day-cell" x="735" y="34" width="11" height="11" fill="#006d32"><title>2025-12-01: 10 commits</title></rect>
 <rect class="day-cell" x="735" y="48" width="11" height="11" fill="#0e4429"><title>2025-12-02: 1 commit</title></rect>
@@ -384,10 +384,10 @@
 <rect class="day-cell" x="749" y="48" width="11" height="11" fill="#161b22"><title>2025-12-09: 0 commits</title></rect>
 <rect class="day-cell" x="749" y="62" width="11" height="11" fill="#161b22"><title>2025-12-10: 0 commits</title></rect>
 <rect class="day-cell" x="749" y="76" width="11" height="11" fill="#161b22"><title>2025-12-11: 0 commits</title></rect>
-<rect class="day-cell" x="749" y="90" width="11" height="11" fill="#26a641"><title>2025-12-12: 15 commits</title></rect>
+<rect class="day-cell" x="749" y="90" width="11" height="11" fill="#006d32"><title>2025-12-12: 15 commits</title></rect>
 <rect class="day-cell" x="749" y="104" width="11" height="11" fill="#161b22"><title>2025-12-13: 0 commits</title></rect>
-<rect class="day-cell" x="763" y="20" width="11" height="11" fill="#26a641"><title>2025-12-14: 14 commits</title></rect>
-<rect class="day-cell" x="763" y="34" width="11" height="11" fill="#39d353"><title>2025-12-15: 22 commits</title></rect>
+<rect class="day-cell" x="763" y="20" width="11" height="11" fill="#006d32"><title>2025-12-14: 14 commits</title></rect>
+<rect class="day-cell" x="763" y="34" width="11" height="11" fill="#26a641"><title>2025-12-15: 22 commits</title></rect>
 <rect class="day-cell" x="763" y="48" width="11" height="11" fill="#161b22"><title>2025-12-16: 0 commits</title></rect>
 <rect class="day-cell" x="763" y="62" width="11" height="11" fill="#0e4429"><title>2025-12-17: 4 commits</title></rect>
 <rect class="day-cell" x="763" y="76" width="11" height="11" fill="#161b22"><title>2025-12-18: 0 commits</title></rect>
@@ -399,5 +399,5 @@
 <rect x="679" y="148" width="11" height="11" fill="#26a641" rx="2" ry="2"/>
 <rect x="693" y="148" width="11" height="11" fill="#39d353" rx="2" ry="2"/>
 <text x="712" y="157" class="day">More</text>
-<text x="35" y="158" class="stats">286 contributions in the last year</text>
+<text x="35" y="158" class="stats">401 contributions in the last year</text>
 </svg>
