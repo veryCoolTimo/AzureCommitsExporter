@@ -25,13 +25,13 @@ GITHUB_USERNAME = os.environ.get("GH_USERNAME", "")
 AUTHOR_EMAILS = [e.strip().lower() for e in os.environ.get("AUTHOR_EMAILS", "").split(",") if e.strip()]
 OUTPUT_FILE = os.environ.get("OUTPUT_FILE", "commits-heatmap.svg")
 
-# Цвета для heatmap (стиль GitHub)
+# Цвета для heatmap (зелёно-фиолетовый градиент)
 COLORS = {
     0: "#161b22",   # нет коммитов
-    1: "#0e4429",   # мало
-    2: "#006d32",   # средне
-    3: "#26a641",   # много
-    4: "#39d353",   # очень много
+    1: "#5a3d6e",   # мало (фиолетовый)
+    2: "#4a6fa5",   # средне (синий)
+    3: "#26a641",   # много (зелёный)
+    4: "#39d353",   # очень много (ярко-зелёный)
 }
 
 
@@ -254,6 +254,42 @@ def aggregate_by_date(commits: list[dict]) -> dict[str, int]:
     return dict(counts)
 
 
+def calculate_streak(commit_counts: dict[str, int]) -> tuple[int, int]:
+    """Рассчитать текущий и максимальный streak"""
+    today = datetime.now().date()
+
+    # Текущий streak
+    current_streak = 0
+    check_date = today
+    while True:
+        date_str = check_date.strftime("%Y-%m-%d")
+        if commit_counts.get(date_str, 0) > 0:
+            current_streak += 1
+            check_date -= timedelta(days=1)
+        else:
+            # Проверим вчера если сегодня ещё нет коммитов
+            if check_date == today:
+                check_date -= timedelta(days=1)
+                continue
+            break
+
+    # Максимальный streak
+    max_streak = 0
+    temp_streak = 0
+    start_date = today - timedelta(days=365)
+
+    for i in range(366):
+        check_date = start_date + timedelta(days=i)
+        date_str = check_date.strftime("%Y-%m-%d")
+        if commit_counts.get(date_str, 0) > 0:
+            temp_streak += 1
+            max_streak = max(max_streak, temp_streak)
+        else:
+            temp_streak = 0
+
+    return current_streak, max_streak
+
+
 def get_color_level(count: int, max_count: int) -> int:
     if count == 0:
         return 0
@@ -271,7 +307,7 @@ def get_color_level(count: int, max_count: int) -> int:
         return 4
 
 
-def generate_svg(commit_counts: dict[str, int], total_commits: int) -> str:
+def generate_svg(commit_counts: dict[str, int], total_commits: int, current_streak: int = 0, max_streak: int = 0) -> str:
     """Генерировать SVG heatmap"""
 
     cell_size = 11
@@ -352,7 +388,16 @@ def generate_svg(commit_counts: dict[str, int], total_commits: int) -> str:
         svg_parts.append(f'<rect x="{legend_x + i * 14}" y="{legend_y}" width="{cell_size}" height="{cell_size}" fill="{color}" rx="2" ry="2"/>')
     svg_parts.append(f'<text x="{legend_x + 75}" y="{legend_y + 9}" class="day">More</text>')
 
+    # Статистика
     svg_parts.append(f'<text x="{margin_left}" y="{height - 10}" class="stats">{total_commits} contributions in the last year</text>')
+
+    # Streak
+    if current_streak > 0:
+        streak_text = f"🔥 {current_streak} day streak"
+    else:
+        streak_text = "No current streak"
+    svg_parts.append(f'<text x="{margin_left + 250}" y="{height - 10}" class="stats">{streak_text}  •  Max: {max_streak} days</text>')
+
     svg_parts.append('</svg>')
 
     return '\n'.join(svg_parts)
@@ -376,8 +421,13 @@ def main():
 
     commit_counts = aggregate_by_date(all_commits)
 
+    # Рассчитать streak
+    current_streak, max_streak = calculate_streak(commit_counts)
+    print(f"   Current streak: {current_streak} days")
+    print(f"   Max streak: {max_streak} days")
+
     print(f"\n🎨 Generating SVG...")
-    svg = generate_svg(commit_counts, len(all_commits))
+    svg = generate_svg(commit_counts, len(all_commits), current_streak, max_streak)
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         f.write(svg)
