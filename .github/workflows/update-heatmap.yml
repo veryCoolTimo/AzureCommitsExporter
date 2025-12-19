@@ -1,0 +1,38 @@
+name: Update Commits Heatmap
+
+on:
+  schedule:
+    # Запуск каждый день в 6:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Ручной запуск
+
+jobs:
+  update-heatmap:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate heatmap
+        env:
+          AZURE_ORG: ${{ vars.AZURE_ORG }}
+          AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
+          AUTHOR_EMAILS: ${{ vars.AUTHOR_EMAILS }}
+        run: python scripts/generate_heatmap.py
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add commits-heatmap.svg
+          git diff --staged --quiet || git commit -m "Update commits heatmap [skip ci]"
+          git push
