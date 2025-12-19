@@ -393,12 +393,10 @@ def generate_svg(commit_counts: dict[str, int], total_commits: int, current_stre
 
     # Streak - вторая строка
     if current_streak > 0:
-        streak_icon = "🔥"
-        streak_text = f"{current_streak} day streak"
+        streak_text = f"Current streak: {current_streak} days"
     else:
-        streak_icon = "💤"
         streak_text = "No current streak"
-    svg_parts.append(f'<text x="{margin_left}" y="{height - 8}" class="stats">{streak_icon} {streak_text}   |   🏆 Max streak: {max_streak} days</text>')
+    svg_parts.append(f'<text x="{margin_left}" y="{height - 8}" class="stats">{streak_text}  •  Max streak: {max_streak} days</text>')
 
     svg_parts.append('</svg>')
 
