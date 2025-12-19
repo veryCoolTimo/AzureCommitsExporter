@@ -130,7 +130,7 @@ def generate_svg(commit_counts: dict[str, int], total_commits: int) -> str:
     cell_size = 11
     cell_gap = 3
     margin_left = 35
-    margin_top = 25
+    margin_top = 20
     margin_bottom = 20
 
     # 53 недели, 7 дней
@@ -164,7 +164,6 @@ def generate_svg(commit_counts: dict[str, int], total_commits: int) -> str:
         '  rect.day-cell:hover { stroke: #8b949e; stroke-width: 1; }',
         '</style>',
         f'<rect width="{width}" height="{height}" fill="#0d1117"/>',
-        f'<text x="{margin_left}" y="15" class="title">Azure DevOps Contributions</text>',
     ]
 
     # Подписи дней недели
