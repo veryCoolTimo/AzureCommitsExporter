@@ -26,6 +26,8 @@ jobs:
         env:
           AZURE_ORG: ${{ vars.AZURE_ORG }}
           AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ vars.GITHUB_USERNAME }}
           AUTHOR_EMAILS: ${{ vars.AUTHOR_EMAILS }}
         run: python scripts/generate_heatmap.py
 
