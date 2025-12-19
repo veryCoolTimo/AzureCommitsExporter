@@ -389,7 +389,7 @@ def generate_svg(commit_counts: dict[str, int], total_commits: int, current_stre
         svg_parts.append(f'<rect x="{legend_x + i * 14}" y="{legend_y}" width="{cell_size}" height="{cell_size}" fill="{color}" rx="2" ry="2"/>')
     svg_parts.append(f'<text x="{legend_x + 75}" y="{legend_y + 9}" class="day">More</text>')
 
-    # Статистика
+    # Статистика (только количество, streak в отдельной карточке)
     svg_parts.append(f'<text x="{margin_left}" y="{height - 10}" class="stats">{total_commits} contributions in the last year</text>')
 
     svg_parts.append('</svg>')
@@ -508,9 +508,9 @@ def main():
     # Генерация streak карточки
     print(f"🎨 Generating streak SVG...")
     streak_svg = generate_streak_svg(commit_counts, len(all_commits), current_streak, max_streak)
-    with open("streak-stats.svg", "w", encoding="utf-8") as f:
+    with open("streak-card.svg", "w", encoding="utf-8") as f:
         f.write(streak_svg)
-    print(f"✅ Saved to streak-stats.svg")
+    print(f"✅ Saved to streak-card.svg")
 
 
 if __name__ == "__main__":
