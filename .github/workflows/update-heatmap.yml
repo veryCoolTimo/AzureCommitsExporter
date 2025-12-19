@@ -39,3 +39,29 @@ jobs:
           git diff --staged --quiet || git commit -m "Update commits heatmap [skip ci]"
           git pull --rebase -X theirs || true
           git push --force-with-lease
+
+      - name: Update profile README
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          # Read stats from STATS.md
+          TOTAL=$(grep "Total commits" STATS.md | grep -oE '[0-9]+')
+          CURRENT=$(grep "Current streak" STATS.md | grep -oE '[0-9]+' | head -1)
+          MAX=$(grep "Max streak" STATS.md | grep -oE '[0-9]+' | head -1)
+
+          # Create stats line
+          STATS_LINE="🔥 **Current streak:** ${CURRENT} days  •  🏆 **Max streak:** ${MAX} days  •  📊 **Total:** ${TOTAL} commits"
+
+          # Clone profile repo
+          git clone https://x-access-token:${GH_PAT}@github.com/veryCoolTimo/veryCoolTimo.git profile-repo
+          cd profile-repo
+
+          # Update README between markers using perl for multiline
+          perl -i -p0e "s|<!-- STATS:START -->.*?<!-- STATS:END -->|<!-- STATS:START -->\n${STATS_LINE}\n<!-- STATS:END -->|s" README.md
+
+          # Commit and push if changed
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add README.md
+          git diff --staged --quiet || git commit -m "Update stats [skip ci]"
+          git push || true
