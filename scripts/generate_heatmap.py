@@ -320,7 +320,7 @@ def generate_svg(commit_counts: dict[str, int], total_commits: int, current_stre
     days = 7
 
     width = margin_left + (weeks * (cell_size + cell_gap)) + 10
-    height = margin_top + (days * (cell_size + cell_gap)) + margin_bottom + 45
+    height = margin_top + (days * (cell_size + cell_gap)) + margin_bottom + 30
 
     today = datetime.now().date()
     start_date = today - timedelta(days=364)
@@ -388,19 +388,31 @@ def generate_svg(commit_counts: dict[str, int], total_commits: int, current_stre
         svg_parts.append(f'<rect x="{legend_x + i * 14}" y="{legend_y}" width="{cell_size}" height="{cell_size}" fill="{color}" rx="2" ry="2"/>')
     svg_parts.append(f'<text x="{legend_x + 75}" y="{legend_y + 9}" class="day">More</text>')
 
-    # Статистика - первая строка
-    svg_parts.append(f'<text x="{margin_left}" y="{height - 25}" class="stats">{total_commits} contributions in the last year</text>')
-
-    # Streak - вторая строка
-    if current_streak > 0:
-        streak_text = f"Current streak: {current_streak} days"
-    else:
-        streak_text = "No current streak"
-    svg_parts.append(f'<text x="{margin_left}" y="{height - 8}" class="stats">{streak_text}  •  Max streak: {max_streak} days</text>')
+    # Статистика
+    svg_parts.append(f'<text x="{margin_left}" y="{height - 10}" class="stats">{total_commits} contributions in the last year</text>')
 
     svg_parts.append('</svg>')
 
     return '\n'.join(svg_parts)
+
+
+def update_stats_file(total: int, azure: int, github: int, current_streak: int, max_streak: int):
+    """Обновить файл STATS.md с актуальной статистикой"""
+    stats_content = f"""## 📊 Stats
+
+| Metric | Value |
+|--------|-------|
+| Total commits | **{total}** |
+| Azure DevOps | {azure} |
+| GitHub | {github} |
+| 🔥 Current streak | **{current_streak} days** |
+| 🏆 Max streak | **{max_streak} days** |
+
+*Last updated: {datetime.now().strftime("%Y-%m-%d %H:%M UTC")}*
+"""
+    with open("STATS.md", "w", encoding="utf-8") as f:
+        f.write(stats_content)
+    print(f"✅ Saved to STATS.md")
 
 
 def main():
@@ -433,6 +445,9 @@ def main():
         f.write(svg)
 
     print(f"✅ Saved to {OUTPUT_FILE}")
+
+    # Сохранить статистику
+    update_stats_file(len(all_commits), len(azure_commits), len(github_commits), current_streak, max_streak)
 
 
 if __name__ == "__main__":
