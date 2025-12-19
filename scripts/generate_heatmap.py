@@ -320,7 +320,7 @@ def generate_svg(commit_counts: dict[str, int], total_commits: int, current_stre
     days = 7
 
     width = margin_left + (weeks * (cell_size + cell_gap)) + 10
-    height = margin_top + (days * (cell_size + cell_gap)) + margin_bottom + 30
+    height = margin_top + (days * (cell_size + cell_gap)) + margin_bottom + 45
 
     today = datetime.now().date()
     start_date = today - timedelta(days=364)
@@ -388,15 +388,17 @@ def generate_svg(commit_counts: dict[str, int], total_commits: int, current_stre
         svg_parts.append(f'<rect x="{legend_x + i * 14}" y="{legend_y}" width="{cell_size}" height="{cell_size}" fill="{color}" rx="2" ry="2"/>')
     svg_parts.append(f'<text x="{legend_x + 75}" y="{legend_y + 9}" class="day">More</text>')
 
-    # Статистика
-    svg_parts.append(f'<text x="{margin_left}" y="{height - 10}" class="stats">{total_commits} contributions in the last year</text>')
+    # Статистика - первая строка
+    svg_parts.append(f'<text x="{margin_left}" y="{height - 25}" class="stats">{total_commits} contributions in the last year</text>')
 
-    # Streak
+    # Streak - вторая строка
     if current_streak > 0:
-        streak_text = f"🔥 {current_streak} day streak"
+        streak_icon = "🔥"
+        streak_text = f"{current_streak} day streak"
     else:
+        streak_icon = "💤"
         streak_text = "No current streak"
-    svg_parts.append(f'<text x="{margin_left + 250}" y="{height - 10}" class="stats">{streak_text}  •  Max: {max_streak} days</text>')
+    svg_parts.append(f'<text x="{margin_left}" y="{height - 8}" class="stats">{streak_icon} {streak_text}   |   🏆 Max streak: {max_streak} days</text>')
 
     svg_parts.append('</svg>')
 
