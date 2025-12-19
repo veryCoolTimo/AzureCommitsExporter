@@ -1,4 +1,4 @@
-# Azure DevOps Commits Heatmap
+# GitHub + Azure DevOps Commits Heatmap
 
 ![Commits Heatmap](./commits-heatmap.svg)
 
