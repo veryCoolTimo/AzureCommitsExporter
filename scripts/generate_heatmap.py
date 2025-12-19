@@ -19,7 +19,7 @@ AZURE_PAT = os.environ.get("AZURE_DEVOPS_PAT", "")
 
 # GitHub
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
-GITHUB_USERNAME = os.environ.get("GITHUB_USERNAME", "")
+GITHUB_USERNAME = os.environ.get("GH_USERNAME", "")
 
 # Общее
 AUTHOR_EMAILS = [e.strip().lower() for e in os.environ.get("AUTHOR_EMAILS", "").split(",") if e.strip()]
