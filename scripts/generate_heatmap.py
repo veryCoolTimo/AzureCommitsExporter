@@ -332,6 +332,7 @@ def generate_svg(commit_counts: dict[str, int], total_commits: int, current_stre
     max_count = max(commit_counts.values()) if commit_counts else 0
 
     svg_parts = [
+        f'<!-- Updated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")} -->',
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}">',
         '<style>',
         '  .month { font-size: 10px; fill: #8b949e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }',
@@ -415,6 +416,7 @@ def generate_streak_svg(commit_counts: dict[str, int], total: int, current_strea
         max_commits = 1
 
     svg_parts = [
+        f'<!-- Updated: {datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")} -->',
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}">',
         '<style>',
         '  .title { font-size: 14px; fill: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-weight: 600; }',
