@@ -400,8 +400,9 @@ def generate_svg(commit_counts: dict[str, int], total_commits: int, current_stre
 def generate_streak_svg(commit_counts: dict[str, int], total: int, current_streak: int, max_streak: int) -> str:
     """Генерировать компактную SVG карточку со streak и мини-графом"""
 
-    width = 320
-    height = 120
+    # Ширина как у heatmap: margin_left + (weeks * (cell_size + cell_gap)) + 10 = 35 + (53 * 14) + 10 = 787
+    width = 787
+    height = 80
 
     # Последние 30 дней для мини-графа
     today = datetime.now().date()
@@ -421,37 +422,33 @@ def generate_streak_svg(commit_counts: dict[str, int], total: int, current_strea
         '<style>',
         '  .title { font-size: 14px; fill: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-weight: 600; }',
         '  .stat-label { font-size: 11px; fill: #8b949e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }',
-        '  .stat-value { font-size: 18px; fill: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-weight: 600; }',
-        '  .streak-fire { font-size: 18px; fill: #f0883e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-weight: 600; }',
+        '  .stat-value { font-size: 22px; fill: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-weight: 600; }',
+        '  .streak-fire { font-size: 22px; fill: #f0883e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-weight: 600; }',
         '</style>',
-        f'<rect width="{width}" height="{height}" fill="#0d1117" rx="6"/>',
-        '<rect x="1" y="1" width="318" height="118" fill="none" stroke="#30363d" rx="6"/>',
+        f'<rect width="{width}" height="{height}" fill="#0d1117"/>',
     ]
 
-    # Заголовок
-    svg_parts.append('<text x="15" y="25" class="title">Contribution Stats</text>')
-
-    # Статистика
+    # Статистика в ряд
     # Current Streak
     if current_streak > 0:
-        svg_parts.append(f'<text x="15" y="55" class="streak-fire">{current_streak}</text>')
+        svg_parts.append(f'<text x="15" y="35" class="streak-fire">{current_streak}</text>')
     else:
-        svg_parts.append(f'<text x="15" y="55" class="stat-value">0</text>')
-    svg_parts.append('<text x="15" y="70" class="stat-label">Current streak</text>')
+        svg_parts.append(f'<text x="15" y="35" class="stat-value">0</text>')
+    svg_parts.append('<text x="15" y="52" class="stat-label">Current streak</text>')
 
     # Max Streak
-    svg_parts.append(f'<text x="90" y="55" class="stat-value">{max_streak}</text>')
-    svg_parts.append('<text x="90" y="70" class="stat-label">Max streak</text>')
+    svg_parts.append(f'<text x="130" y="35" class="stat-value">{max_streak}</text>')
+    svg_parts.append('<text x="130" y="52" class="stat-label">Max streak</text>')
 
     # Total
-    svg_parts.append(f'<text x="165" y="55" class="stat-value">{total}</text>')
-    svg_parts.append('<text x="165" y="70" class="stat-label">Total commits</text>')
+    svg_parts.append(f'<text x="245" y="35" class="stat-value">{total}</text>')
+    svg_parts.append('<text x="245" y="52" class="stat-label">Total commits</text>')
 
-    # Мини-граф (последние 30 дней)
-    graph_x = 15
-    graph_y = 85
-    graph_width = 290
-    graph_height = 25
+    # Мини-граф (последние 30 дней) - справа
+    graph_x = 400
+    graph_y = 15
+    graph_width = 370
+    graph_height = 45
     bar_width = graph_width / 30
 
     for i, count in enumerate(last_30_days):
