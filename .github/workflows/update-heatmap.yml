@@ -37,5 +37,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add commits-heatmap.svg
           git diff --staged --quiet || git commit -m "Update commits heatmap [skip ci]"
-          git pull --rebase
-          git push
+          git pull --rebase -X theirs || true
+          git push --force-with-lease
