@@ -2,7 +2,6 @@
 <style>
   .month { font-size: 10px; fill: #8b949e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
   .day { font-size: 9px; fill: #8b949e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-  .title { font-size: 12px; fill: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-weight: 600; }
   .stats { font-size: 10px; fill: #8b949e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
   rect.day-cell { rx: 2; ry: 2; }
   rect.day-cell:hover { stroke: #8b949e; stroke-width: 1; }
