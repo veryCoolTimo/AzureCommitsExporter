@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="120">
+<style>
+  .title { font-size: 14px; fill: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-weight: 600; }
+  .stat-label { font-size: 11px; fill: #8b949e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .stat-value { font-size: 18px; fill: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-weight: 600; }
+  .streak-fire { font-size: 18px; fill: #f0883e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-weight: 600; }
+</style>
+<rect width="320" height="120" fill="#0d1117" rx="6"/>
+<rect x="1" y="1" width="318" height="118" fill="none" stroke="#30363d" rx="6"/>
+<text x="15" y="25" class="title">Contribution Stats</text>
+<text x="15" y="55" class="stat-value">0</text>
+<text x="15" y="70" class="stat-label">Current streak</text>
+<text x="90" y="55" class="stat-value">14</text>
+<text x="90" y="70" class="stat-label">Max streak</text>
+<text x="165" y="55" class="stat-value">286</text>
+<text x="165" y="70" class="stat-label">Total commits</text>
+<rect x="15.0" y="108.9" width="8.7" height="1.1" fill="#5a3d6e" rx="1"/>
+<rect x="24.7" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="34.3" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="44.0" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="53.7" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="63.3" y="104.3" width="8.7" height="5.7" fill="#5a3d6e" rx="1"/>
+<rect x="73.0" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="82.7" y="108.9" width="8.7" height="1.1" fill="#5a3d6e" rx="1"/>
+<rect x="92.3" y="108.9" width="8.7" height="1.1" fill="#5a3d6e" rx="1"/>
+<rect x="102.0" y="104.3" width="8.7" height="5.7" fill="#5a3d6e" rx="1"/>
+<rect x="111.7" y="87.3" width="8.7" height="22.7" fill="#39d353" rx="1"/>
+<rect x="121.3" y="98.6" width="8.7" height="11.4" fill="#4a6fa5" rx="1"/>
+<rect x="131.0" y="108.9" width="8.7" height="1.1" fill="#5a3d6e" rx="1"/>
+<rect x="140.7" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="150.3" y="106.6" width="8.7" height="3.4" fill="#5a3d6e" rx="1"/>
+<rect x="160.0" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="169.7" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="179.3" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="189.0" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="198.7" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="208.3" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="218.0" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="227.7" y="93.0" width="8.7" height="17.0" fill="#26a641" rx="1"/>
+<rect x="237.3" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="247.0" y="94.1" width="8.7" height="15.9" fill="#26a641" rx="1"/>
+<rect x="256.7" y="85.0" width="8.7" height="25.0" fill="#39d353" rx="1"/>
+<rect x="266.3" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="276.0" y="105.5" width="8.7" height="4.5" fill="#5a3d6e" rx="1"/>
+<rect x="285.7" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+<rect x="295.3" y="108.0" width="8.7" height="2.0" fill="#21262d" rx="1"/>
+</svg>

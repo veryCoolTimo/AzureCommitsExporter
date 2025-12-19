@@ -396,23 +396,83 @@ def generate_svg(commit_counts: dict[str, int], total_commits: int, current_stre
     return '\n'.join(svg_parts)
 
 
-def update_stats_file(total: int, azure: int, github: int, current_streak: int, max_streak: int):
-    """Обновить файл STATS.md с актуальной статистикой"""
-    stats_content = f"""## 📊 Stats
+def generate_streak_svg(commit_counts: dict[str, int], total: int, current_streak: int, max_streak: int) -> str:
+    """Генерировать компактную SVG карточку со streak и мини-графом"""
 
-| Metric | Value |
-|--------|-------|
-| Total commits | **{total}** |
-| Azure DevOps | {azure} |
-| GitHub | {github} |
-| 🔥 Current streak | **{current_streak} days** |
-| 🏆 Max streak | **{max_streak} days** |
+    width = 320
+    height = 120
 
-*Last updated: {datetime.now().strftime("%Y-%m-%d %H:%M UTC")}*
-"""
-    with open("STATS.md", "w", encoding="utf-8") as f:
-        f.write(stats_content)
-    print(f"✅ Saved to STATS.md")
+    # Последние 30 дней для мини-графа
+    today = datetime.now().date()
+    last_30_days = []
+    for i in range(29, -1, -1):
+        d = today - timedelta(days=i)
+        date_str = d.strftime("%Y-%m-%d")
+        last_30_days.append(commit_counts.get(date_str, 0))
+
+    max_commits = max(last_30_days) if last_30_days else 1
+    if max_commits == 0:
+        max_commits = 1
+
+    svg_parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}">',
+        '<style>',
+        '  .title { font-size: 14px; fill: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-weight: 600; }',
+        '  .stat-label { font-size: 11px; fill: #8b949e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }',
+        '  .stat-value { font-size: 18px; fill: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-weight: 600; }',
+        '  .streak-fire { font-size: 18px; fill: #f0883e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-weight: 600; }',
+        '</style>',
+        f'<rect width="{width}" height="{height}" fill="#0d1117" rx="6"/>',
+        '<rect x="1" y="1" width="318" height="118" fill="none" stroke="#30363d" rx="6"/>',
+    ]
+
+    # Заголовок
+    svg_parts.append('<text x="15" y="25" class="title">Contribution Stats</text>')
+
+    # Статистика
+    # Current Streak
+    if current_streak > 0:
+        svg_parts.append(f'<text x="15" y="55" class="streak-fire">{current_streak}</text>')
+    else:
+        svg_parts.append(f'<text x="15" y="55" class="stat-value">0</text>')
+    svg_parts.append('<text x="15" y="70" class="stat-label">Current streak</text>')
+
+    # Max Streak
+    svg_parts.append(f'<text x="90" y="55" class="stat-value">{max_streak}</text>')
+    svg_parts.append('<text x="90" y="70" class="stat-label">Max streak</text>')
+
+    # Total
+    svg_parts.append(f'<text x="165" y="55" class="stat-value">{total}</text>')
+    svg_parts.append('<text x="165" y="70" class="stat-label">Total commits</text>')
+
+    # Мини-граф (последние 30 дней)
+    graph_x = 15
+    graph_y = 85
+    graph_width = 290
+    graph_height = 25
+    bar_width = graph_width / 30
+
+    for i, count in enumerate(last_30_days):
+        bar_height = (count / max_commits) * graph_height if count > 0 else 2
+        x = graph_x + i * bar_width
+        y = graph_y + graph_height - bar_height
+
+        # Цвет в зависимости от количества
+        if count == 0:
+            color = "#21262d"
+        elif count <= max_commits * 0.25:
+            color = "#5a3d6e"
+        elif count <= max_commits * 0.5:
+            color = "#4a6fa5"
+        elif count <= max_commits * 0.75:
+            color = "#26a641"
+        else:
+            color = "#39d353"
+
+        svg_parts.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_width - 1:.1f}" height="{bar_height:.1f}" fill="{color}" rx="1"/>')
+
+    svg_parts.append('</svg>')
+    return '\n'.join(svg_parts)
 
 
 def main():
@@ -446,8 +506,12 @@ def main():
 
     print(f"✅ Saved to {OUTPUT_FILE}")
 
-    # Сохранить статистику
-    update_stats_file(len(all_commits), len(azure_commits), len(github_commits), current_streak, max_streak)
+    # Генерация streak карточки
+    print(f"🎨 Generating streak SVG...")
+    streak_svg = generate_streak_svg(commit_counts, len(all_commits), current_streak, max_streak)
+    with open("streak-stats.svg", "w", encoding="utf-8") as f:
+        f.write(streak_svg)
+    print(f"✅ Saved to streak-stats.svg")
 
 
 if __name__ == "__main__":
